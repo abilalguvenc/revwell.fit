@@ -13,9 +13,15 @@
 }
 
 body {
-    font-family: 'Catavalo', serif;
+    font-family: 'Tenor Sans', sans-serif;
     background-color: var(--color-white);
     color: var(--color-dark-green);
+}
+
+h1, h2, h3, 
+.nav-links a,
+.book-now {
+    font-family: 'Italiana', serif;
 }
 
 /* Navigation */
@@ -43,42 +49,84 @@ nav {
     color: var(--color-white);
     text-decoration: none;
     border-radius: 2px;
+    font-weight: 500;
+    font-family: 'Tenor Sans', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: var(--color-peach);
+    color: var(--color-dark-green);
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background-image: url('assets/hero-bg.jpg');
+    background-image: url('assets/hero.png');
     background-size: cover;
     background-position: center;
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 4rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
 }
 
 .hero-content {
     max-width: 800px;
+    position: relative;
+    z-index: 1;
+    margin-top: 25vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--color-white);
     margin-bottom: 1rem;
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: 'Italiana', serif;
+    letter-spacing: 2px;
 }
 
 .hero-content h2 {
-    font-size: 2rem;
-    color: var(--color-peach);
+    font-size: 2.5rem;
+    color: var(--color-white);
     margin-bottom: 2rem;
+    line-height: 1.2;
+    font-weight: normal;
+    font-family: 'Tenor Sans', sans-serif;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 .learn-more {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--color-peach);
+    background-color: var(--color-white);
     color: var(--color-dark-green);
     text-decoration: none;
-    border-radius: 2px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.learn-more:hover {
+    background-color: var(--color-peach);
+    color: var(--color-white);
 }
 
 /* About Section */
@@ -129,10 +177,10 @@ footer {
 }
 
 .footer-column h3 {
-    font-family: 'Catavalo', serif;
     margin-bottom: 1rem;
     color: var(--color-peach);
     font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .footer-column ul {

@@ -120,19 +120,49 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer-section h3 {
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-family: 'Catavalo', serif;
     margin-bottom: 1rem;
     color: var(--color-peach);
+    font-size: 1.2rem;
 }
 
-.footer-section a {
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
     color: var(--color-white);
     text-decoration: none;
+}
+
+.footer-column:first-child {
+    flex: 0.8;
+}
+
+.logo img {
     display: block;
-    margin-bottom: 0.5rem;
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-logo img {
+    display: block;
+    width: 100px;
+    height: 35px;
+    object-fit: contain;
 } 
